@@ -33,6 +33,7 @@ Plugin 'gmarik/vundle'
 " links to original repos on github
 " Plugin 'majutsushi/tagbar'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'shinokada/listtrans.vim'
 Plugin 'atweiden/vim-dragvisuals'
 Plugin 'atweiden/vim-betterdigraphs'
@@ -138,7 +139,7 @@ set vb t_vb=
 "colorscheme desert
 set background=dark
 colorscheme solarized
-set guifont=Monospace\ 12
+set guifont=Monospace\ 14
 set cursorline
 hi CursorLine cterm=none ctermbg=darkgray ctermfg=yellow guifg=black guibg=steelblue
 hi Cursor guifg=yellow guibg=black
