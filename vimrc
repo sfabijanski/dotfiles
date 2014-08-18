@@ -92,6 +92,7 @@ Plugin 'closetag.vim'
 " non github repos
 " Plugin 'git://git.wincent.com/command-t.git'
 
+call vundle#end()
 filetype plugin indent on   " required!
 " this is the end of the Vundle setup
 
