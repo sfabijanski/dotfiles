@@ -1,0 +1,41 @@
+# find shorthand
+function fi() {
+    find . -iname "$1" 2>&1 | grep -v 'Permission denied'
+}
+
+# find shorthand
+function f() {
+    find . -name "$1" 2>&1 | grep -v 'Permission denied'
+}
+
+# Create a new directory and enter it
+function md() {
+	mkdir -p "$@" && cd "$@"
+}
+
+
+# Copy w/ progress
+cp_p () {
+  rsync -WavP --human-readable --progress $1 $2
+}
+
+
+# get gzipped size
+function gz() {
+	echo "orig size    (bytes): "
+	cat "$1" | wc -c
+	echo "gzipped size (bytes): "
+	gzip -c "$1" | wc -c
+}
+
+# search terms quickly from cli
+function goo() {
+    xdg-open https://google.com/search?q="$*"
+}
+
+# turn that video into webm.
+webmify(){
+	ffmpeg -i $1 -vcodec libvpx -acodec libvorbis -isync -copyts -aq 80 -threads 3 -qmax 30 -y $2 $1.webm
+}
+
+
