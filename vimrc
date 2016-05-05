@@ -136,9 +136,8 @@ set vb t_vb=
 
 
 " Setup the editor colors
-"colorscheme desert
 set background=dark
-colorscheme solarized
+colorscheme seti
 set guifont=Monospace\ 14
 set cursorline
 hi CursorLine cterm=none ctermbg=darkgray ctermfg=yellow guifg=black guibg=steelblue
@@ -190,6 +189,10 @@ noremap <Leader>rb !!bash<CR>
 " setup a session when closing vim
 autocmd VimLeave * :mksession!
 
+" all .md files are markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+au BufRead,BufNewFile *.md setlocal textwidth=80
+
 " address white space
 " *****************************
 " show whitespace 
@@ -198,6 +201,9 @@ match ErrorMsg '\s\+$'
 
 
 
+" Disable folding of markdown
+" set nofoldenable
+let g:vim_markdown_folding_disabled=1
 
 
 
