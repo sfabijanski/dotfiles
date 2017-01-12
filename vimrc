@@ -166,12 +166,23 @@ map - ddp
 map <space> viw
 
 
+" switch buffers like they were tabs in a windowed app
+nnoremap <C-Tab> :bn<CR>
+nnoremap <C-S-Tab> :bp<CR>
+
 " Settings TAB for switching between splitted windows
 map <Tab> <C-W>w
 map <S-Tab> <C-W>p
 
-" delete white space 
+" get a count of open buffers
+command BuffCount echo len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) 'buffer(s) open'
+noremap <Leader>bc :BuffCount<CR>
+
+" delete white space
 nnoremap <Leader>rws :%s/\s\+$//e<CR>
+
+" open new buffer and begin file browsing
+nnoremap <C-b> :enew<CR>:e .<CR>
 
 " copying and pasting
 noremap <Leader>y "+y
