@@ -38,4 +38,6 @@ webmify(){
 	ffmpeg -i $1 -vcodec libvpx -acodec libvorbis -isync -copyts -aq 80 -threads 3 -qmax 30 -y $2 $1.webm
 }
 
-
+function urldecode () {
+    echo -e "$(sed 's/+/ /g;s/%\(..\)/\\x/g;')"
+}
