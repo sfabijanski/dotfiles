@@ -26,18 +26,21 @@ call vundle#begin(expand(vimDir . '/bundle'))
 
 " let Vundle manage Vundle
 " its required! to start with vundle
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " My Bundles go here:
 "
 " links to original repos on github
-" Plugin 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'shinokada/listtrans.vim'
 Plugin 'atweiden/vim-dragvisuals'
 Plugin 'atweiden/vim-betterdigraphs'
-Plugin 'atweiden/vim-vmath'
+Plugin 'OrangeT/vim-csharp'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jelera/vim-javascript-syntax'
