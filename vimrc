@@ -140,8 +140,8 @@ set vb t_vb=
 
 " Setup the editor colors
 set background=dark
-colorscheme seti
-set guifont=Monospace\ 14
+colorscheme onedark
+set guifont=Courier\ 10\ Pitch\ 12
 set cursorline
 hi CursorLine cterm=none ctermbg=darkgray ctermfg=yellow guifg=black guibg=steelblue
 hi Cursor guifg=yellow guibg=black
