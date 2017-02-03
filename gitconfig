@@ -1,0 +1,35 @@
+[alias]
+    ap = add -p
+    branches = branch -a
+    co = checkout
+    cob = checkout -b
+
+    # List contributors with number of commits
+    contributors = shortlog --summary --numbered
+
+    d = diff
+
+    # View abbreviated SHA, description, and history graph of the latest 20 commits
+    l = log --pretty=oneline -n 20 --graph --abbrev-commit
+
+    # list my last twenty commits
+    m = log --pretty=format:'%C(yellow)%h%Cred%d %Cgreen%ad %Creset%s %Cblue[%cn]' --author="Steven" --date=short -20 --decorate
+
+    # use ff-only when you have nothing committed
+    pf = pull --ff-only
+    # use rebase when you have committed changes
+    pr = pull --rebase
+
+    remotes = remote -v
+    #
+    # Show verbose output about tags, branches or remotes
+    tags = tag -l
+    # list aliases at command line
+    alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+
+[user]
+	name = Steven Fabijanski
+[core]
+	excludesfile = ~/.gitignore_global
+[push]
+	default = simple
