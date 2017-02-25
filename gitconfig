@@ -12,8 +12,13 @@
     # View abbreviated SHA, description, and history graph of the latest 20 commits
     l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
+    # View abbreviated SHA, description, and history graph of the latest 20 commits
+    lu = log --pretty=format:'%C(yellow)%h%Cred%d %Cgreen%ad %Cblue[%cn] %Creset%s' \
+        --date=format:'%Y-%m-%d %H:%M:%S' -40 --decorate
+
     # list my last twenty commits
-    m = log --pretty=format:'%C(yellow)%h%Cred%d %Cgreen%ad %Creset%s %Cblue[%cn]' --author="Steven" --date=short -20 --decorate
+    m = log --pretty=format:'%C(yellow)%h%Cred%d %Cgreen%ad %Creset%s %Cblue[%cn]' \
+        --author="Steven" --date=short -20 --decorate
 
     # use ff-only when you have nothing committed
     pf = pull --ff-only
