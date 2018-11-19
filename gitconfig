@@ -12,6 +12,9 @@
     # View abbreviated SHA, description, and history graph of the latest 20 commits
     l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
+    # view abbreviated SHA, description, and graph for entire repo
+    ll = log --decorate --all --oneline --graph
+
     # View abbreviated SHA, description, and history graph of the latest 20 commits
     lu = log --pretty=format:'%C(yellow)%h%Cred%d %Cgreen%ad %Cblue[%cn] %Creset%s' \
         --date=format:'%Y-%m-%d %H:%M:%S' -40 --decorate
